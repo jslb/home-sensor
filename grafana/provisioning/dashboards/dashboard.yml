@@ -1,0 +1,21 @@
+# config file version
+apiVersion: 1
+
+providers:
+  - name: auto-provisioned
+    org_id: 1
+    # <string, required> name of the dashboard folder. Required
+    folder: ''
+    # <string, required> provider type. Required
+    type: 'file'
+    disableDeletion: false
+    editable: true
+    # <int> how often Grafana will scan for changed dashboards
+    updateIntervalSeconds: 5
+    # <bool> allow updating provisioned dashboards from the UI
+    allowUiUpdates: true
+    options:
+      # <string, required> path to dashboard files on disk. Required
+      path: /etc/grafana/dashboards
+      # <bool> use folder names from filesystem to create folders in Grafana
+      foldersFromFilesStructure: true
