@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  # My grafana service
+  grafana:
+    image: grafana/grafana
+    build:
+      context: ""
+      dockerfile: Dockerfile
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+# Explicitly define the persistent volume for your data storage
+volumes:
+  grafana-data:
+    name: grafana-data
+    external: false
+
