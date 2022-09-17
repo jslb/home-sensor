@@ -1,7 +1,7 @@
 FROM grafana/grafana:8.2.3-ubuntu
 
 # Disable Login form or not
-ENV GF_AUTH_DISABLE_LOGIN_FORM "true"
+ENV GF_AUTH_DISABLE_LOGIN_FORM "false"
 # Allow anonymous authentication or not
 ENV GF_AUTH_ANONYMOUS_ENABLED "true"
 # Role of anonymous user
