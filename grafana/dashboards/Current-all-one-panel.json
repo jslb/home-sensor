@@ -1,0 +1,197 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 3,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 18,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "libraryPanel": {
+        "description": "",
+        "meta": {
+          "connectedDashboards": 1,
+          "created": "2022-09-24T18:47:25Z",
+          "createdBy": {
+            "avatarUrl": "",
+            "id": 0,
+            "name": ""
+          },
+          "folderName": "General",
+          "folderUid": "",
+          "updated": "2022-09-24T18:47:25Z",
+          "updatedBy": {
+            "avatarUrl": "",
+            "id": 0,
+            "name": ""
+          }
+        },
+        "name": "all",
+        "type": "timeseries",
+        "uid": "cJionX7Vz",
+        "version": 1
+      },
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi"
+        }
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "timestamp",
+              "text": "",
+              "type": "timestamp_epoch_s"
+            },
+            {
+              "selector": "voc",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "temp",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "humidity",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "pm10",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "pm1",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "co2",
+              "text": "",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.data",
+          "source": "url",
+          "type": "json",
+          "url": "http://airquality.local:6969/data",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "all",
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 31,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Current (all one panel) Copy",
+  "uid": "aLq07X74k",
+  "version": 1
+}
