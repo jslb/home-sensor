@@ -48,16 +48,26 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 50,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "yellow",
                 "value": null
               },
               {
-                "color": "red",
-                "value": 80
+                "color": "green",
+                "value": 20
+              },
+              {
+                "color": "yellow",
+                "value": 24
+              },
+              {
+                "color": "orange",
+                "value": 35
               }
             ]
           },
@@ -96,7 +106,7 @@
           "root_selector": "$.temp",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -114,12 +124,22 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "yellow",
                 "value": null
+              },
+              {
+                "color": "green",
+                "value": 30
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
               },
               {
                 "color": "red",
@@ -162,7 +182,7 @@
           "root_selector": "$.humidity",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -180,6 +200,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 301,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -188,8 +210,16 @@
                 "value": null
               },
               {
+                "color": "#EAB839",
+                "value": 12
+              },
+              {
+                "color": "orange",
+                "value": 35
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 250
               }
             ]
           }
@@ -227,14 +257,14 @@
           "root_selector": "$.pm1",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "PM1.0",
+      "title": "PM1.0 (ug/m3)",
       "type": "gauge"
     },
     {
@@ -245,6 +275,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 255,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -253,8 +285,16 @@
                 "value": null
               },
               {
+                "color": "#EAB839",
+                "value": 12
+              },
+              {
+                "color": "orange",
+                "value": 35
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 250
               }
             ]
           }
@@ -292,14 +332,14 @@
           "root_selector": "$.pm2.5",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "PM2.5",
+      "title": "PM2.5 (ug/m3)",
       "type": "gauge"
     },
     {
@@ -310,6 +350,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 255,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -318,8 +360,16 @@
                 "value": null
               },
               {
+                "color": "#EAB839",
+                "value": 12
+              },
+              {
+                "color": "orange",
+                "value": 35
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 250
               }
             ]
           }
@@ -357,14 +407,14 @@
           "root_selector": "$.pm4",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "PM4.0",
+      "title": "PM4.0 (ug/m3)",
       "type": "gauge"
     },
     {
@@ -375,6 +425,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 3005,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -383,8 +435,16 @@
                 "value": null
               },
               {
+                "color": "#EAB839",
+                "value": 25
+              },
+              {
+                "color": "orange",
+                "value": 260
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 3000
               }
             ]
           }
@@ -422,14 +482,14 @@
           "root_selector": "$.pm10",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "PM10",
+      "title": "PM10 (ug/m3)",
       "type": "gauge"
     },
     {
@@ -440,6 +500,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 5005,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -448,8 +510,16 @@
                 "value": null
               },
               {
+                "color": "#EAB839",
+                "value": 700
+              },
+              {
+                "color": "orange",
+                "value": 1400
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 5000
               }
             ]
           }
@@ -487,14 +557,14 @@
           "root_selector": "$.co2",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "CO2",
+      "title": "CO2 (ppm)",
       "type": "gauge"
     },
     {
@@ -505,6 +575,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 515,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -513,8 +585,8 @@
                 "value": null
               },
               {
-                "color": "red",
-                "value": 80
+                "color": "#EAB839",
+                "value": 500
               }
             ]
           }
@@ -552,14 +624,14 @@
           "root_selector": "$.voc",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/latest",
+          "url": "http://airquality.local:6969/latest",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "VOC",
+      "title": "VOC (ug/m3)",
       "type": "gauge"
     },
     {
@@ -608,7 +680,7 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
@@ -616,16 +688,28 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "yellow",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 20
+              },
+              {
+                "color": "#EAB839",
+                "value": 24
+              },
+              {
+                "color": "orange",
+                "value": 35
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 45
               }
             ]
           },
-          "unit": "short"
+          "unit": "celsius"
         },
         "overrides": []
       },
@@ -668,14 +752,14 @@
           "root_selector": "$.data",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/data",
+          "url": "http://airquality.local:6969/data",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "Temperature",
+      "title": "Temperature (C)",
       "type": "timeseries"
     },
     {
@@ -710,16 +794,30 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "yellow",
                 "value": null
+              },
+              {
+                "color": "green",
+                "value": 30
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "orange",
+                "value": 70
               },
               {
                 "color": "red",
@@ -727,7 +825,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "humidity"
         },
         "overrides": []
       },
@@ -770,14 +868,14 @@
           "root_selector": "$.data",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/data",
+          "url": "http://airquality.local:6969/data",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "Humidity",
+      "title": "Humidity (%)",
       "type": "timeseries"
     },
     {
@@ -812,7 +910,7 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
@@ -824,8 +922,16 @@
                 "value": null
               },
               {
+                "color": "yellow",
+                "value": 12
+              },
+              {
+                "color": "orange",
+                "value": 35
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 250
               }
             ]
           },
@@ -860,11 +966,6 @@
               "type": "timestamp_epoch_s"
             },
             {
-              "selector": "pm10",
-              "text": "",
-              "type": "number"
-            },
-            {
               "selector": "pm1",
               "text": "",
               "type": "number"
@@ -887,14 +988,14 @@
           "root_selector": "$.data",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/data",
+          "url": "http://airquality.local:6969/data",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "PM",
+      "title": "PM[1|2.5|4] (ug/m3)",
       "type": "timeseries"
     },
     {
@@ -929,7 +1030,7 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
@@ -941,8 +1042,16 @@
                 "value": null
               },
               {
+                "color": "green",
+                "value": 25
+              },
+              {
+                "color": "#EAB839",
+                "value": 260
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 3000
               }
             ]
           },
@@ -955,6 +1064,218 @@
         "w": 12,
         "x": 12,
         "y": 15
+      },
+      "id": 21,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "timestamp",
+              "text": "",
+              "type": "timestamp_epoch_s"
+            },
+            {
+              "selector": "pm10",
+              "text": "",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.data",
+          "source": "url",
+          "type": "json",
+          "url": "http://airquality.local:6969/data",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "PM10 (ug/m3)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "line+area"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 500
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 24
+      },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "timestamp",
+              "text": "",
+              "type": "timestamp_epoch_s"
+            },
+            {
+              "selector": "voc",
+              "text": "",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.data",
+          "source": "url",
+          "type": "json",
+          "url": "http://airquality.local:6969/data",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "VOC (ug/m3)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "line+area"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 700
+              },
+              {
+                "color": "orange",
+                "value": 1400
+              },
+              {
+                "color": "red",
+                "value": 5000
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 24
       },
       "id": 14,
       "options": {
@@ -989,7 +1310,7 @@
           "root_selector": "$.data",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/data",
+          "url": "http://airquality.local:6969/data",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1056,9 +1377,9 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 24
+        "y": 33
       },
-      "id": 17,
+      "id": 20,
       "options": {
         "legend": {
           "calcs": [],
@@ -1066,7 +1387,7 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "multi"
         }
       },
       "pluginVersion": "8.2.3",
@@ -1082,6 +1403,31 @@
               "selector": "voc",
               "text": "",
               "type": "number"
+            },
+            {
+              "selector": "temp",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "humidity",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "pm10",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "pm1",
+              "text": "",
+              "type": "number"
+            },
+            {
+              "selector": "co2",
+              "text": "",
+              "type": "number"
             }
           ],
           "filters": [],
@@ -1091,14 +1437,14 @@
           "root_selector": "$.data",
           "source": "url",
           "type": "json",
-          "url": "http://192.168.0.54:6969/data",
+          "url": "http://airquality.local:6969/data",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "VOC",
+      "title": "all",
       "type": "timeseries"
     }
   ],
@@ -1110,12 +1456,12 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Current - basic",
   "uid": "xussKTMVk",
-  "version": 4
+  "version": 8
 }
